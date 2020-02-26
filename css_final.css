@@ -4,6 +4,11 @@ code {
 div,simpleSelector,andSelector {
   margin: 30px;
 }
+
+h2,p,h1,h3,pre,code {
+  font-family: arial;
+}
+
 .simpleSelector {
   border: 4px solid pink;
 }
@@ -32,9 +37,6 @@ andSelector#amazing[andSelector="wow"].combine{
   display: block;
 }
 
-h2,p,h1,h3,pre,code {
-  font-family: arial;
-}
 
 #descendant div p,h5 {
   color: blue;

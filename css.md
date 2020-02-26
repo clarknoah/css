@@ -20,7 +20,9 @@ By the end of this instruction, you should know how to do the following:
 Below are the concepts we will be learning about today
 
 ### Concepts
+* Simple Selector
 * Combinator Selector
+* AND selector (Spaceless Selector)
 * descendant selector (space)
 * Child selector (>)
 * adjacent sibling selector (+)
@@ -29,12 +31,16 @@ Below are the concepts we will be learning about today
 ### CLI Commands
 **NONE**
 
-### Language Syntax
-* element.class {}
-* selector
+### Language Syntax (CSS)
+* `.selector.selector {}` (AND Selector)
+* `selector selector {}` (descendant Selector)
+* `selector > selector {}` (Child Selector)
+* `selector + selector {}` (Adjacent Sibling Selector)
+* `selector ~ selector {}` (General Sibling Selector)
+
 
 ## Combinator Selectors
-Up until now, you've only been exposed to simple selectors, or selectors that only have ONE selector, such as in the example below:
+Up until now, you've only been exposed to `simple selectors`, or selectors that only have ONE selector, such as in the example below:
 ```CSS
 .simpleSelector {
   border: 4px solid pink;
@@ -53,11 +59,15 @@ simpleSelector {
 }
 ```
 
+`Combinator selectors` are selectors which combine two or more `simple selectors` in order to create complex selection rules for elements.
+
+#### (I Do) Demonstrate Descendant Combinator Selector
+I'm going to give a quick demo of a combinator selector in action.
 
 
 ### AND Selector (Spaceless Selector)
-The first selector that we're going to look at I like to call an `AND` selector, because the way it works is like so:
-> Select all elements that contain `selector1` AND `selector2` AND `selector2`
+The first `combinator selector` that we're going to look at I like to call an `AND selector`, because the way it works is like so:
+> Select all elements that match `selector1` AND `selector2` AND `selector2`
 
 Here is an example of just such a selector:
 
@@ -67,10 +77,14 @@ andSelector#amazing[andSelector="wow"].combinee{
   display: block;
 }
 ```
-Holey moley that is a lot of selectors **WITH NO SPACES**.
+Holey moley that is a lot of selectors **WITH NO SPACES**. This selector works fine and well if you're only dealing with a single `tag selector`, but what if I want apply this selector to multiple tags?
+
+:question: How do we solve this problem? Does `h1h2 {}` work?
 
 #### (We Do) Use the AND Selector to assign borders
-There are four elements in the AND Selector section of the HTML
+There are four elements in the `AND Selector` section of the HTML. We are going to create an `And Selector` for each `div`, relying on the classes and IDs to user the `AND selector`.
+
+:question: What is an `AND Selector`?
 
 ### Aggregate Selector (Comma Selector)
 Aggregate selectors are quite simple. You provide a comma separated list of selectors, and whatever styling rules you add will apply to ALL elements that match ANY of the selectors.
@@ -148,3 +162,9 @@ div > p {
   </p>
 </div>
 ```
+
+#### (We Do) Applying `child selector`
+We are now going to apply what we have learned, and select only the `p` element on line 113 using the `child selector`.
+
+## Summary
+Today, we have learn a lot about the six different types of combinator selectors, who can recall what some of these selectors are and how we used them in our demo?

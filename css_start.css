@@ -1,0 +1,24 @@
+code {
+  background: lightgrey;
+}
+div,simpleSelector,andSelector {
+  margin: 30px;
+}
+
+
+.simpleSelector {
+  border: 4px solid pink;
+}
+
+#simpleSelector {
+  border: 4px solid brown;
+}
+
+simpleSelector {
+  border: 4px solid orange;
+  display: block;
+}
+
+[simpleAttribute="simple"] {
+  border: 4px solid green;
+}
