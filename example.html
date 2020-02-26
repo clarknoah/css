@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css_final.css">
+  </head>
+  <body>
+    <div class="">
+      <h2>Simple Selectors</h2>
+      <div class="simpleSelector">
+        <h3>.class Selector</h3>
+        <p>Selects based on class</p>
+      </div>
+      <div id=simpleSelector>
+        <h3>#id Selector</h3>
+        <p>Selects off ID</p>
+      </div>
+      <simpleSelector>
+        <h3>Element Selector</h3>
+        <p>Selects off element</p>
+      </simpleSelector>
+      <div simpleAttribute="simple">
+        <h3>[simpleAttribute="simple"] Selector</h3>
+        <p>Selects based off of attribute</p>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="">
+      <h2>Combinator Selectors</h2>
+      <div class="">
+        <h3>AND Selectors</h3>
+        <p>A <code>CSS selector</code> which selects only elements that contain ALL of the selectors provided</p>
+        <div class="combine">
+          <h3>element.class Selector</h3>
+          <p>Selects elements which have the tag of `element`, and the class of `.class`</p>
+        </div>
+        <div id="idClass" class="combine">
+          <h3>#id.class Selector</h3>
+          <p>Selects elements which have the id of <code>#id</code> and class of <code>.class</code></p>
+        </div>
+        <div class="combine" andSelector="id">
+          <h3>[andSelector="id"].class Selector</h3>
+          <p>Selects elements which have the id of <code>#id</code> and class of <code>.class</code></p>
+        </div>
+        <andSelector class="combine" andSelector="wow" id="amazing">
+          <h3>[andSelector="id"].class Selector</h3>
+          <p>Selects elements which have the id of <code>#id</code> and class of <code>.class</code></p>
+        </andSelector>
+      </div>
+
+      <div class="">
+        <h2>Aggregate Selector</h2>
+        <p>A `CSS Selector` which applies styling rules to ANY element that matches the selectors</p>
+        <div class="">
+
+        </div>
+        <div class="">
+
+        </div>
+        <div class="">
+
+        </div>
+      </div>
+      <div class="" id="descendant">
+        <h2>Descendant Selector</h2>
+        <p>A `CSS Selector` matches all elements that are descendants of a specified `element`</p>
+        <div class="">
+          <p>Turn me Blue!</p>
+          <h5>Turn me blue too!</h5>
+        </div>
+        <div class="">
+
+        </div>
+        <div class="">
+
+        </div>
+      </div>
+
+      <div class="" id="general">
+        <h2>General Sibling Selector</h2>
+        <p>A `CSS selector` that selects all elements that are siblings of a specified `element`</p>
+        <div class="">
+          a
+        </div>
+        <div class="">
+          a
+        </div>
+        <div class="">
+        a
+        </div>
+      </div>
+      <div class="" id="adjacent">
+        <h2>Adjacent Sibling Selector</h2>
+        <p>A CSS selector that selects all elements that are the adjacent siblings of a specified element</p>
+        <div class="">
+          a
+        </div>
+        <div class="secondToLast">
+          a
+        </div>
+        <div class="">
+        a
+        </div>
+      </div>
+
+      <div class="" id="child">
+        <h2>Child Selector</h2>
+        <p>A `Combinator selector` selects all `elements` that are the children of a specified element.</p>
+        <div>
+          <p>Child of Div</p>
+          <main><p>Descendant but not child of div</p></main>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

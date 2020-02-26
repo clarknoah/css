@@ -1,0 +1,53 @@
+code {
+  background: lightgrey;
+}
+div,simpleSelector,andSelector {
+  margin: 30px;
+}
+.simpleSelector {
+  border: 4px solid pink;
+}
+
+#simpleSelector {
+  border: 4px solid brown;
+}
+
+simpleSelector {
+  border: 4px solid orange;
+  display: block;
+}
+
+[simpleAttribute="simple"] {
+  border: 4px solid green;
+}
+div.combine {
+  border: 10px dashed red;
+}
+#idClass.combine {
+  border: 4px dashed blue;
+}
+
+andSelector#amazing[andSelector="wow"].combine{
+  border: 10px dashed teal;
+  display: block;
+}
+
+h2,p,h1,h3,pre,code {
+  font-family: arial;
+}
+
+#descendant div p,h5 {
+  color: blue;
+}
+
+#general p ~ div {
+  background-color: gray;
+}
+
+#adjacent .secondToLast ~ div{
+  background-color: gray;
+}
+
+#child div > p {
+  color: red;
+}
